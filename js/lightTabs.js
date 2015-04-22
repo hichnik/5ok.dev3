@@ -13,7 +13,7 @@
                 $(tabs).children("ul").children("li").eq(i).addClass("active");
             }
             
-            showPage(2);				
+            showPage(0);				
             
             $(tabs).children("ul").children("li").each(function(index, element){
                 $(element).attr("data-page", i);
