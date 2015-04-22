@@ -1,0 +1,338 @@
+.promos_page
+  position relative
+  .tab_title
+    p
+      font-weight bold
+  .promos_filter
+    padding 20px
+    background #f7f7f7
+    .promos_filter_inner
+      border-radius 3px
+      border 1px solid #e6e6e6
+      background #ffffff
+      box-shadow 0 0 5px #eaeaea
+    .form
+      clearfix()
+      padding 15px 5px 0 5px
+    .field
+      position relative
+      float left
+      width 345px
+      height 40px
+      margin 0 10px 10px
+      .input_holder
+        absolute top left
+        width 40px
+        height 40px
+        padding 0
+        label
+          position relative
+          display block
+          height 100%
+          &:before
+            content " "
+            absolute top 50% left 50%
+            width 20px
+            height 20px
+            margin -10px
+            background url(../images/sprite.png) -420px -20px no-repeat
+          &.checked:before
+            background-position -420px -40px
+          input
+            position relative
+            z-index -1
+            display none
+            opacity 0
+      p
+        margin 0
+        padding-left 40px
+        font-size 11px
+        line-height 12px
+        color #555555
+        b
+          font-size 10px
+          text-transform uppercase
+          text-decoration underline
+          color #000
+
+  .promos_list
+    margin 20px 0 0
+    clearfix()
+    .promos_item
+      position relative
+      float left
+      display block
+      width 570px
+      height 180px
+      margin-bottom 15px
+      border-radius 3px
+      overflow hidden
+      border 1px solid #e6e6e6
+      &:nth-child(odd)
+        margin-right 16px
+      .photo
+        width 100%
+        height 100%
+        overflow hidden
+        img
+          display block
+          width 100%
+          height 100%
+      p
+        absolute bottom left
+        width 100%
+        height 30px
+        margin 0
+        background #e6e6e6
+        span
+          padding 0 10px
+          font-size 12px
+          line-height 30px
+          color #777777
+          &.fright
+            font-size 9px
+
+  .pager_block
+    border-top 1px solid #dddddd
+    border-bottom 1px solid #dddddd
+
+  .promos_about
+    float left
+    width 550px
+    margin 15px 0 0
+    h3,.h3
+      margin 0
+      font-size 15px
+      line-height 16px
+      text-transform uppercase
+      color #000
+    p
+      margin 30px 0 0
+      font-size 11px
+      line-height 16px
+      color #333333
+      b
+        display inline-block
+        margin 0 5px 0 0
+        padding 0 3px
+        border-radius 3px
+        font-size 14px
+        font-weight bold
+        text-transform uppercase
+        color #ffffff
+        background #555555
+    > div
+      position relative
+      margin 20px 0 0
+      padding 3px 0 0 45px
+      font-size 11px
+      font-weight 300
+      text-transform uppercase
+      color #000
+      .product_badges_holder
+        top 0
+    .promos_info_btn
+      position relative
+      display inline-block
+      margin 30px 0 0
+      padding 3px 30px 3px 10px
+      border-radius 5px
+      border 1px solid #dddddd
+      font-size 10px
+      font-weight normal
+      text-transform uppercase
+      color #000
+      background #f0f0f0
+      cursor pointer
+      &:after
+        content " "
+        absolute top 50% right 5px
+        width 20px
+        height 20px
+        margin -8px 0 0
+        background url(../images/sprite.png) -200px -20px no-repeat
+
+  .promos_img
+    float right
+    width 570px
+    margin 15px 0 0
+    padding 10px
+    background #f0f0f0
+    .photo
+      width 100%
+      height 150px
+      overflow hidden
+      border-radius 5px
+      img
+        display block
+        width 100%
+        height auto
+
+  .promos_info
+    margin 10px 0 0
+    padding 0 10px
+    max-height 0
+    overflow hidden
+    transition transition
+    &.act
+      max-height 500px
+    p
+      margin 0
+      font-size 11px
+      color #000
+
+  .promos_products_list
+    position relative
+    margin 30px 0 0
+    padding 0 0 20px
+    clearfix()
+    .promos_product_item
+      position relative
+      float left
+      width 50%
+      height 240px
+      margin-bottom 15px
+      &:hover
+        z-index 3
+        .promos_product_item_inner
+          box-shadow 0 0 5px #cacaca
+    .promos_product_item_inner
+      absolute top left
+      width 100%
+      height 100%
+      border-radius 3px
+      overflow hidden
+      background #ffffff
+    .name
+      absolute top 15px left 220px
+      z-index 1
+      width 320px
+      white-space nowrap
+      overflow hidden
+      padding 5px 15px 0 0
+      robotoCond()
+      font-size 13px
+      line-height 14px
+      text-transform uppercase
+      color #450043
+      &:after
+        content " "
+        absolute top right
+        width 40px
+        height 100%
+        background linear-gradient(to right, transparent, #ffffff)
+    .photo
+      position relative
+      width 200px
+      height 200px
+      padding 20px 15px 0
+      overflow hidden
+      .product_badges_holder
+        top 25px
+        left 15px
+      img
+        display block
+        width auto
+        height 100%
+        margin 0 auto
+    .bonus
+      absolute top 35px left 205px
+      padding 5px 0 0 15px
+      span
+        display inline-block
+        height 20px
+        margin-left -5px
+        font-size 10px
+        line-height 20px
+        text-transform uppercase
+        color orange
+    .info
+      absolute top 68px left 220px
+      width 350px
+      height 100px
+      padding-top 5px
+      border-top 1px solid #f1f1f1
+      border-bottom 1px solid #f1f1f1
+      .price
+        position relative
+        float left
+        margin 5px 0 0 3px
+        robotoCond()
+        font-size 22px
+        line-height 22px
+        font-weight bold
+        text-transform uppercase
+        color #000
+        span
+          font-size 10px
+          font-weight normal
+      .price_old
+        absolute top 40px left 5px
+        margin 5px 0 0
+        robotoCond()
+        font-size 16px
+        line-height 20px
+        font-weight 300
+        text-transform uppercase
+        color #555555
+        span
+          position relative
+          font-size 9px
+        &:after
+          content " "
+          absolute top 50% left
+          width 100%
+          height 1px
+          background #555555
+      .price_off
+        absolute top 70px left 5px
+        margin 5px 0 0
+        font-size 9px
+        line-height 20px
+        text-transform uppercase
+        color #555555
+        span
+          font-size 11px
+      .btn
+        position absolute
+        top 5px
+        left 115px
+        width 110px
+        padding 5px 0
+        cursor pointer
+        &.btn_golden
+          top 40px
+          font-size 10px
+      .favorite_add
+      .favorite_remove
+        absolute top 10px left 245px
+      .compare_add
+      .compare_go
+        absolute top 45px left 245px
+        margin 0
+      .link_feedbacks
+        absolute top 75px left 245px
+        margin 0
+      .rating
+        absolute top 75px left 120px
+        margin 0
+    .tags
+      absolute top 170px left 220px
+      width 350px
+      padding 10px 0 0 5px
+      .title
+        margin-bottom 5px
+        font-size 10px
+        text-transform uppercase
+        color #555555
+      .tag
+        display inline-block
+        vertical-align top
+        margin-bottom 4px
+        padding 3px 5px
+        border-radius 3px
+        font-size 9px
+        line-height 12px
+        text-transform uppercase
+        color #555555
+        background #ebebeb

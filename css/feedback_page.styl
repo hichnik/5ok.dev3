@@ -1,0 +1,147 @@
+.feedback_page
+  .tab_title
+    p
+      font-weight bold
+  .feedback_column
+    clearfix()
+    &.left
+      float left
+      width 41%
+    &.right
+      float right
+      width 57%
+  .feedback_block
+    padding 15px
+    background #f7f7f7
+    .feedback_block_white
+      position relative
+      padding 15px 20px
+      border-radius 3px
+      border 1px solid #e6e6e6
+      background #ffffff
+      box-shadow 0 0 5px #eaeaea
+    .form
+      margin 15px 0 0
+      .field
+        margin-bottom 20px
+        clearfix()
+        label
+          float left
+          width 130px
+          font-size 10px
+          line-height 28px
+          text-transform uppercase
+          color #555
+        .input_holder
+          float left
+          width 217px
+          margin-left 10px
+          padding 0 10px
+        input
+        textarea
+          margin 0 -10px
+          padding 5px 10px
+          border-color #c4c4c4
+        textarea
+          min-height 100px
+          resize none
+        .placeholder
+          padding 5px 10px
+        .selecter
+          margin 0 -12px 0 -10px
+          .selecter-selected
+          .selecter-item
+            padding 5px 10px
+          .selecter-selected:after
+            right 5px
+          .selecter-options
+            max-height 180px
+        &.field_email
+          margin-bottom 35px
+        &.field_notice
+          padding 0 25px 0 0
+          max-height 200px
+          overflow hidden
+          transition transition
+          .input_holder
+            margin 0
+            width 100%
+        &.collapsed
+          max-height 0
+        &.field_vote
+          margin-bottom 15px
+          padding-bottom 15px
+          border-bottom 1px solid #dddddd
+          p
+            margin 0
+            float none
+            font-size 12px
+            font-weight bold
+            text-transform none
+            color #000
+          .input_holder
+            float none
+            width 350px
+            margin-top 25px
+            clearfix()
+            > span
+              float left
+              display block
+              margin 0 3px 0 0
+              font-size 11px
+              font-weight 300
+              color #555
+          label
+            position relative
+            width 20px
+            height 20px
+            margin 0 2px
+            span
+              absolute bottom 100% left 50%
+              width 20px
+              margin 0 0 0 -12px
+              font-size 11px
+              line-height 12px
+              font-weight 300
+              text-align center
+              color #555
+            input
+              margin 3px 0
+              padding 0
+              cursor pointer
+      .submit
+        input
+          padding 12px 45px
+          font-size 14px
+
+  .feedback_msgform
+    position relative
+    > p
+      margin 0
+      font-size 11px
+      line-height 14px
+      text-align justify
+      color #555
+      a
+        text-decoration underline
+        &:hover
+          text-decoration none
+    .submit
+      padding-left 140px
+
+  .feedback_rateform
+    position relative
+    > p
+      margin 0
+      font-size 12px
+      font-weight 300
+      line-height 16px
+      color #000
+    .feedback_add_text
+      font-size 10px
+      text-transform uppercase
+      text-decoration underline
+      color purple
+      cursor pointer
+      &:hover
+        text-decoration none

@@ -1,0 +1,82 @@
+.faq_page
+  position relative
+  .tab_title
+    p
+      font-weight bold
+  .faq_block
+    position relative
+    padding-bottom 15px
+    background #f7f7f7
+    .faq_item
+      padding 0 15px
+      &.closed
+        .title
+          font-weight 300
+          &:before
+            background-position -380px -60px
+        .text
+          max-height 0 !important
+    .title
+      position relative
+      display inline-block
+      margin 10px 0
+      padding 0 0 0 15px
+      font-size 14px
+      font-weight bold
+      color #000
+      cursor pointer
+      &:before
+        content " "
+        absolute top left -5px
+        width 20px
+        height 20px
+        background  url(../images/sprite.png) -380px -80px no-repeat
+      &:after
+        content " "
+        absolute top 100% left 15px
+        right 0
+        border-bottom 1px dotted #000
+    .text
+      overflow hidden
+      transition transition
+      .text_inner
+        padding 10px
+        border-radius 3px
+        background #ffffff
+        box-shadow 0 0 5px #cacaca
+      p
+        margin 0
+        font-size 12px
+        line-height 14px
+        color #000
+        a
+          text-decoration underline
+          &:hover
+            text-decoration none
+      ul
+        margin 0
+        padding 0
+        list-style-type none
+      li
+        position relative
+        padding-left 9px
+        font-size 12px
+        line-height 14px
+        color #000
+        &:before
+          content " "
+          absolute top 5px left
+          width 4px
+          height 4px
+          border-radius 50%
+          background #000
+
+
+
+
+
+
+
+
+
+

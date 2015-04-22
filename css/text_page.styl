@@ -1,0 +1,122 @@
+.text_page
+  position relative
+  .tab_title
+    p
+      font-weight bold
+  .text_page_block
+    position relative
+    margin 15px 0 0
+    h3
+      margin 14px 0 0
+      font-size 14px
+      font-weight bold
+      text-transform uppercase
+      color #333333
+      &:first-child
+        margin-top 0
+    p
+      margin 12px 0 0
+      font-size 12px
+      line-height 16px
+      text-align justify
+      color #000
+      &:first-child
+        margin-top 0
+      a
+        text-decoration underline
+        &:hover
+          text-decoration none
+    ul
+      margin 0
+      padding 0
+      list-style-type none
+      li
+        position relative
+        padding-left 9px
+        font-size 12px
+        line-height 14px
+        color #000
+        &:before
+          content " "
+          absolute top 5px left
+          width 4px
+          height 4px
+          border-radius 50%
+          background #000
+    img
+      display block
+      margin 0 auto 20px
+    .text_page_video
+      position relative
+      margin-top 30px
+      overflow hidden
+      iframe
+        max-width 50%
+      .text_page_video_share
+        absolute top -5px right
+        width 480px
+      p
+        float left
+        margin 0
+        padding 13px 10px 0 0
+        robotoCond()
+        font-size 11px
+        text-transform uppercase
+        color #000
+      .social_links
+        float left
+        margin-top 5px
+      .share_email
+        float right
+        margin 0
+        text-align left
+        font-size 11px
+        line-height 40px
+        text-decoration underline
+        text-transform uppercase
+        color #666666
+        span
+          vertical-align middle
+        .icon
+          margin-top -2px
+        &:hover
+          text-decoration none
+          .icon
+            opacity 1
+
+  .about_us_block
+    position relative
+    margin 15px 0 0
+    h3
+      margin 16px 0 0
+      font-size 14px
+      line-height 16px
+      font-weight normal
+      text-transform uppercase
+      color orange
+      &:first-child
+        margin-top 0
+    p
+      margin 16px 0 0
+      font-size 12px
+      line-height 14px
+      font-weight 300
+      text-align justify
+      color #000
+    ul
+      margin: 16px 0 0
+      padding: 0
+      list-style-type: none
+      li
+        position: relative
+        padding 0 0 10px 25px
+        font-size 12px
+        line-height 20px
+        font-weight 300
+        color #000
+        &:before
+          content " "
+          absolute top left
+          width: 20px
+          height: 20px
+          background: url(../images/sprite.png) -320px 0 no-repeat

@@ -1,0 +1,66 @@
+/*info_window*/
+.info_window{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info_window *{font-family: 'proxima_nova' !important;}
+.info_window .iw_inner{
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    left: 20px;
+    top: -32px;
+    z-index: 1;
+    background: #323232;
+    padding: 17px 20px 19px;
+    width: 220px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    color: white;
+}
+.info_window .iw_title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+.info_window .iw_text{
+    font-size: 14px;
+    line-height: 18px;
+}
+.info_window .iw_arrow{
+    border-width: 7px;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: transparent #323232;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 100%;
+    top: 12px;
+    z-index: 1;
+}
+.info_window .iw_close{
+    /*background: url('../images/sprite.png?1') no-repeat -200px -160px #7b858e;*/
+    background: red;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.info_window .iw_close:hover{background-color: #ff9900}
+.info_window .title{font-weight: bold}
+.info_window .iw_img{
+    float: left;
+    width: 50px;
+    margin: 0 10px 0 -10px;
+    text-align: center;
+}
+.info_window .iw_content{
+    overflow: hidden;
+}

@@ -1,0 +1,112 @@
+.credit_page
+  .tab_title
+    p
+      font-weight bold
+  .credit_column
+    width 49%
+    clearfix()
+    &.left
+      float left
+    &.right
+      float right
+      .credit_bank_white p
+        line-height 30px
+  .credit_bank
+    padding 10px 15px
+    background #f7f7f7
+    > p
+      margin 0 0 10px
+      font-size 11px
+      letter-spacing -0.3px
+      text-transform uppercase
+    > div
+      margin-bottom 10px
+      &:last-child
+        margin-bottom 0
+    .credit_bank_white
+      position relative
+      height 98px
+      padding 15px 20px 15px 150px
+      border-radius 3px
+      border 1px solid #e6e6e6
+      background #ffffff
+      box-shadow 0 0 5px #eaeaea
+      clearfix()
+      p
+        margin 0
+        font-size 12px
+        line-height 20px
+        letter-spacing -0.3px
+        font-weight 300
+        color #000
+      a
+        color #000
+        text-decoration underline
+        &:hover
+          text-decoration none
+          color #000
+    .photo
+      absolute top 15px left 15px
+      width 120px
+      height 100px
+      &:after
+        content " "
+        absolute top right -5px
+        width 1px
+        height 100%
+        background #e1e1e1
+      img
+        absolute top left
+        right 0
+        bottom 0
+        width 100%
+        height auto
+        margin auto
+  .credit_text
+    p
+      margin 20px 0 0
+      font-size 12px
+      font-weight 300
+      color #000
+      &.orange
+        color #fb6e00
+      img
+        margin-top 30px
+    a
+      text-decoration underline
+      color #000
+      &:hover
+        text-decoration none
+        color #000
+    ul
+      margin 0
+      padding 0
+      list-style-type none
+      li
+        position relative
+        padding-left 10px
+        font-size 12px
+        font-weight 300
+        color #000
+        &:before
+          content " "
+          absolute top 50% left 2px
+          width 2px
+          height 2px
+          margin (-@width / 2) 0
+          border-radius 50%
+          background #000
+    ol
+      margin 10px 0 0
+      padding 0 0 0 17px
+      li
+        font-size 12px
+        font-weight 300
+        color #000
+
+  .credit_instalments
+    margin 20px 0 0
+    line-height normal
+    color #000
+    img
+      max-width 100%

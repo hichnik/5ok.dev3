@@ -1,0 +1,144 @@
+.subcat_page
+  position relative
+  .subcat_holder
+    position relative
+    padding 15px 0 0
+    &:after
+      content " "
+      absolute top left 50%
+      width 30px
+      height 100%
+      margin-left (-@width / 2)
+      background #ffffff
+    .subcat_item
+      position relative
+      float left
+      width 50%
+      &:before
+        content " "
+        absolute top left
+        right 0
+        height 1px
+        background #eaeaea
+      .photo
+        absolute top left
+        width 46%
+        height 100%
+        overflow hidden
+        img
+          display block
+          absolute top left
+          right 0
+          bottom 0
+          width 70%
+          height auto
+          margin auto
+      .title
+        padding 10px 15px 0 48%
+        font-size 16px
+        line-height 20px
+        font-weight bold
+        text-transform uppercase
+        color #000
+      .list
+        margin 20px 0 0
+        padding 0 15px 20px 48%
+        list-style-type none
+        li
+          position relative
+          a
+            position relative
+            margin-left -5px
+            padding-left 20px
+            display inline-block
+            vertical-align top
+            font-size 11px
+            line-height 20px
+            text-transform uppercase
+            color #555555
+            &:hover
+              color #000000
+              &:before
+                margin-left -10px
+            &:before
+              content " "
+              absolute top left
+              width 20px
+              height 20px
+              margin-left 0
+              background url(../images/sprite.png) -220px -20px no-repeat
+              transition transition
+
+  .badge_dashed
+    position relative
+    float left
+    width 267px
+    height 190px
+    background url(../images/badge_dashed.png) left center no-repeat
+    span
+      absolute top 50% left
+      width 230px
+      height 20px
+      margin-top -10px
+      font-size 16px
+      line-height 20px
+      font-weight 300
+      text-transform uppercase
+      text-align center
+      color #888888
+  .subcat_slider
+    clearfix()
+    .subcat_slider_holder
+      float right
+      width 870px
+      height 190px
+      .bx-pager
+        padding 0
+        bottom 0
+        a
+          background #ffffff !important
+          border 1px solid purple
+          &.active
+            background purple !important
+      .bx-wrapper
+        .bx-viewport
+          border-radius 3px
+          li img
+            width 870px
+            height 190px
+        .bx-controls-direction
+          .bx-prev
+          .bx-next
+            top auto
+            bottom 4px
+            width 20px
+            height 20px
+            background url(../images/sprite.png) no-repeat
+          .bx-prev
+            left auto
+            right 50%
+            background-position -160px 0
+          .bx-next
+            left 50%
+            right auto
+            background-position -180px 0
+  .subcat_partners
+    padding 20px 0
+    clearfix()
+    .badge_dashed span
+      margin-top -20px
+    .subcat_partners_holder
+      float right
+      width 870px
+      height 187px
+      clearfix()
+      .subcat_partners_item
+        float left
+        width 210px
+        height 90px
+        margin 0 3px 3px
+        overflow hidden
+        img
+          display block
+          width 100%
+          height auto

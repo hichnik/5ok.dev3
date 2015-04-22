@@ -1,0 +1,117 @@
+.articles_page
+  position relative
+  .tab_title
+    p
+      font-weight bold
+    a
+      display inline-block
+      padding 0 10px
+      font-size 12px
+      font-weight 300
+      text-transform uppercase
+      text-decoration underline
+      color #000
+      &:hover
+        text-decoration none
+  .articles_block
+    padding 10px
+    background #f7f7f7
+    clearfix()
+    .articles_item
+      position relative
+      float left
+      display block
+      width 510px
+      height 270px
+      margin 10px
+      padding 10px 20px
+      border-radius 3px
+      overflow hidden
+      background #ffffff
+      box-shadow 0 0 5px #cacaca
+      .name
+        position relative
+        width 100%
+        robotoCond()
+        font-size 14px
+        text-transform uppercase
+        color #000
+        white-space nowrap
+        overflow hidden
+        &:after
+          content " "
+          absolute top right
+          width 40px
+          height 100%
+          background linear-gradient(to right, transparent, #ffffff)
+      .photo
+        position relative
+        float left
+        width 180px
+        height 180px
+        margin-top 10px
+        overflow hidden
+        img
+          absolute top left
+          right 0
+          bottom 0
+          display block
+          max-width 100%
+          max-height 100%
+          margin auto
+      .text
+        height 196px
+        margin-top 10px
+        margin-left 190px
+        overflow hidden
+        p
+          margin 14px 0 0
+          font-size 12px
+          line-height 14px
+          text-align justify
+          color #666666
+          &:first-child
+            margin-top 0
+      .article_info
+        absolute top 260px left 20px
+        width 180px
+        font-size 11px
+        line-height 20px
+        color #999999
+        &.has_video:before
+          content " "
+          absolute bottom right
+          width 40px
+          height 40px
+          background url(../images/sprite.png) -280px -360px no-repeat
+        .date
+          float left
+        .lookup
+          float left
+          position relative
+          margin-left 15px
+          padding-left 20px
+          &:before
+            content " "
+            absolute top left
+            width 20px
+            height 20px
+            background url(../images/sprite.png) -240px 0 no-repeat
+      .article_tags
+        absolute top 242px left 20px
+        margin-left 190px
+        width 200px
+        line-height 14px
+        span
+          font-size 10px
+          color #999999
+        a
+          font-size 11px
+          text-decoration underline
+          color #cb7bd2
+          &:hover
+            text-decoration none
+            color #cb7bd2
+      .btn
+        absolute top 246px right 20px
+        padding 5px 15px

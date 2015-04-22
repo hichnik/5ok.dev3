@@ -1,0 +1,3093 @@
+@import 'nib'
+
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,cyrillic');
+roboto()
+  font-family 'Roboto', Arial, Helvetica, sans-serif
+
+@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,cyrillic');
+robotoCond()
+  font-family 'Roboto Condensed', Arial, Helvetica, sans-serif
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('fonts/myriadpro-regular.otf');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'MyriadPro Black';
+  src: url('fonts/myriadpro-black.otf');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'MyriadPro Light';
+  src: url('fonts/myriadpro-light.otf');
+  font-weight: normal;
+  font-style: normal
+}
+
+/*******************
+* Variables
+*******************/
+tdur = 400ms
+transition = all tdur
+
+purple = #913f98
+orange = #faa61a
+green = #a6ce39
+gray = #555555
+blue = #110482
+
+html, body
+  height  100%
+
+body
+  roboto()
+  margin 0
+  color gray
+  font-size 16px
+  line-height 19px
+img
+  border none
+.wrapper
+  min-width 1160px
+  width 100%
+  /*min-height 100%*/
+  /*height auto !important*/
+  height 100%
+  position relative
+  z-index 2
+.wrapper_inner
+  min-height 100%
+  position relative
+  z-index 1
+.max_width
+  max-width 1160px
+  margin auto
+
+a
+  color purple
+  text-decoration none
+  /*&:visited*/
+  /*color #551a8b*/
+  transition transition
+  &:hover
+    color #450043
+  &:focus
+    outline thin dotted
+  &:hover,
+  &:active
+    outline 0
+
+pre
+  white-space pre
+  white-space pre-wrap
+  word-wrap break-word
+
+img
+  border 0
+  -ms-interpolation-mode bicubic
+  vertical-align middle
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form
+  margin 0
+fieldset
+  border 0
+  margin 0
+  padding 0
+
+label
+  cursor pointer
+
+legend
+  border 0
+  padding 0
+  white-space normal
+
+button,
+input,
+select,
+textarea
+  font-family Arial, Helvetica, sans-serif
+  font-size 100%
+  margin 0
+  vertical-align baseline
+  outline none !important
+  &:focus
+    border-color cornflowerblue
+  .form .error &
+    color red
+
+button,
+input
+  line-height normal
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  cursor pointer
+  -webkit-appearance button
+
+button[disabled],
+input[disabled]
+  cursor default
+
+input[type="checkbox"],
+input[type="radio"]
+  box-sizing border-box
+  padding 0
+
+input[type="search"]
+  -webkit-appearance textfield
+  -moz-box-sizing content-box
+  -webkit-box-sizing content-box
+  box-sizing content-box
+
+button::-moz-focus-inner,
+input::-moz-focus-inner
+  border 0
+  padding 0
+textarea
+  overflow auto
+  vertical-align top
+  resize vertical
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid,
+textarea:invalid
+  background-color #f0dddd
+
+.form
+  .field
+    margin 0 0 20px
+    &.error
+      .error_txt
+        display block
+      input,
+      textarea
+        background #ffdbdb url(../images/input_error.png) right 7px no-repeat
+    &.success
+      input,
+      textarea
+        background url(../images/input_success.png) right 7px no-repeat
+  .input_holder
+    position relative
+    padding 0 20px
+    input,
+    textarea
+      display block
+      width 100%
+      padding 11px 17px
+      border 1px solid #f3f3f3
+      border-radius 3px
+      margin 0 -20px
+      background #ffffff
+      font-size 14px
+      line-height 17px
+      letter-spacing .25px
+      color #2a2a2a
+      &[type='checkbox']
+        padding 0
+        background none
+    textarea
+      min-height 50px
+  .placeholder
+    absolute left top
+    padding 12px 17px
+    font-size 14px
+    line-height 17px
+    color #727272
+    letter-spacing .25px
+    cursor text
+  .error_txt
+    display none
+    position absolute
+    top 100%
+    left 0
+    margin 0 5px 0 5px
+    font-size 12px
+    line-height 15px
+    color red
+  .form_footer
+    text-align center
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table
+  border-collapse collapse
+  border-spacing 0
+td
+  vertical-align top
+.dtable
+  display table
+.dtcell
+  display table-cell
+  vertical-align middle
+
+/* =============================================================================
+   Global elements
+   ========================================================================== */
+.inline-block
+  displayinline-block
+.none
+  display none !important
+
+.invisible
+  visibility hidden
+.hidden
+  display none !important
+  visibility hidden !important
+.visible
+  visibility visible !important
+
+.clear
+  clear both
+  height 0
+  font-size 0
+  line-height 0
+  overflow hidden
+  display block
+clearfix()
+  zoom 1
+  &:before,
+  &:after
+    content ""
+    display table
+  &:after
+    clear both
+.clearfix
+  clearfix()
+
+.fleft
+  float left !important
+.fright
+  float right !important
+
+.vat
+  vertical-align top !important
+.vam
+  vertical-align middle !important
+.vab
+  vertical-align bottom !important
+
+.tac
+  text-align center !important
+.tar
+  text-align right !important
+.uppercase
+  text-transform uppercase !important
+
+.not_select
+  user-select none
+
+/* =============================================================================
+   Icon
+   ========================================================================== */
+.icon
+  display inline-block
+  width 20px
+  height 20px
+  background-image url('../images/sprite.png')
+  background-repeat no-repeat
+  vertical-align middle
+  &.icon_list
+    background-position -220px 0
+  &.icon_grid
+    background-position -200px 0
+  &.icon_arrow_down
+    background-position -200px -20px
+  &.icon_envelope
+    width 40px
+    height 40px
+    background-position -240px -20px
+  &.icon_plus
+    width 40px
+    height 40px
+    background-position -160px -320px
+  &.icon_equal
+    width 40px
+    height 40px
+    background-position -200px -320px
+  &.icon_plus_big
+    width 40px
+    height 40px
+    background-position -240px -320px
+  &.icon_equal_big
+    width 40px
+    height 40px
+    background-position -280px -320px
+  &.icon_script
+    background-position -300px 0
+  &.icon_download
+    background-position -300px -20px
+  &.icon_download_pdf
+    background-position -300px -40px
+  &.icon_download_pdf_purple
+    background-position -340px -80px
+  &.icon_check_mark
+    background-position -320px 0
+  &.icon_check_mark_green
+    background-position -320px -100px
+  &.icon_balloon_purple_medium
+    background-position -320px -20px
+  &.icon_balloon_purple
+    background-position -320px -40px
+  &.icon_info_gray
+    background-position -260px -60px
+  &.icon_info_pink_big
+    background-position -320px -80px
+  &.icon_arr_up
+    width 40px
+    height 40px
+    background-position -200px -100px
+  &.icon_tick
+    background-position -300px -60px
+  &.icon_add50
+    width 40px
+    background-position -240px -100px
+  &.icon_percentage
+    width 35px
+    height 40px
+    background-position -260px -120px
+  &.icon_shipping
+    width 35px
+    height 40px
+    background-position -260px -160px
+  &.icon_payment
+    width 35px
+    height 40px
+    background-position -260px -200px
+  &.icon_service
+    width 35px
+    height 40px
+    background-position -260px -240px
+  &.icon_map_point
+    width 35px
+    height 40px
+    background-position -260px -280px
+  &.icon_card
+    width 35px
+    height 40px
+    background-position -300px -120px
+  &.icon_engine
+    width 35px
+    height 40px
+    background-position -300px -160px
+  &.icon_credit_1
+    width 40px
+    height 30px
+    background-position -200px -200px
+  &.icon_credit_2
+    width 40px
+    height 30px
+    background-position -200px -240px
+  &.icon_credit_3
+    width 40px
+    height 30px
+    background-position -200px -280px
+  &.icon_feedback_1
+    width 40px
+    height 40px
+    background-position -300px -200px
+  &.icon_feedback_2
+    width 40px
+    height 40px
+    background-position -300px -240px
+  &.icon_articles_list
+    width 40px
+    height 40px
+    background-position -300px -280px
+  &.icon_engine_empty
+    width 40px
+    height 40px
+    background-position -340px -120px
+  &.icon_question
+    width 40px
+    height 40px
+    background-position -340px -160px
+
+.icon_soc
+  display inline-block
+  width 25px
+  height 25px
+  background-image url('../images/icons_social.png')
+  background-repeat no-repeat
+  &.fb
+    background-position 0 0
+  &.vk
+    background-position -25px 0
+  &.tw
+    background-position -50px 0
+  &.gp
+    background-position -75px 0
+  &.od
+    background-position -100px 0
+
+.icon_soc_big
+  display inline-block
+  width 30px
+  height 30px
+  background-image url('../images/icons_social_login.png')
+  background-repeat no-repeat
+  &.fb
+    background-position 0 0
+  &.vk
+    background-position -30px 0
+  &.tw
+    background-position -60px 0
+  &.gp
+    background-position -90px 0
+  &.od
+    background-position -120px 0
+
+/* =============================================================================
+   Btn
+   ========================================================================== */
+.btn
+  display inline-block
+  padding 8px 15px
+  border 1px solid #222222
+  border-radius 3px
+  color #222222
+  font-size 12px
+  text-transform uppercase
+  text-decoration none
+  text-align center
+  cursor pointer
+  transition transition
+  &:hover
+    color #f0f0f0
+    background #222222
+  &.btn_golden
+    padding 8px 15px
+    background orange
+    border none
+    color #ffffff
+    box-shadow inset 0 -15px 30px #f99014
+    &:hover
+      color #ffffff
+      background orange
+      box-shadow inset 0 15px 30px #f99014
+  &.btn_purple
+    padding 8px 15px
+    background #ac5fb2
+    border none
+    color #ffffff
+    box-shadow inset 0 -15px 30px #893891
+    &:hover
+      color #ffffff
+      background #ac5fb2
+      box-shadow inset 0 15px 30px #893891
+  &.btn_gray
+    padding 8px 15px
+    background #888888
+    border none
+    color #ffffff
+    box-shadow inset 0 -15px 30px #626262
+    &:hover
+      color #ffffff
+      background #a1a1a1
+
+.btn_input
+  position relative
+  z-index 1
+  .submit
+    absolute left top
+    z-index 10
+    width 100%
+    height 100%
+    opacity 0
+    overflow hidden
+    cursor pointer
+    input
+      position absolute
+      z-index 10
+      width auto !important
+      height auto !important
+      top 0
+      right 0
+      margin -2px !important
+      font-size 200px !important
+      cursor pointer
+
+/* =============================================================================
+   bx-slider defaults
+   ========================================================================== */
+.bx-wrapper
+  margin 0 auto
+  .bx-viewport
+    box-shadow none
+    border none
+    left 0
+    background none
+    > ul
+      margin 0
+      padding 0
+      list-style-type none
+      > li > img
+        margin 0 auto
+  .bx-controls-direction
+    a
+      transition none
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+.header
+  margin 0
+  padding 10px 0 0
+  height 210px
+  .header_logo
+    float left
+    width 183px
+    height 141px
+    margin 0 55px 17px 0
+    background url(../images/header_logo.png) 0 0 no-repeat
+  .main_menu
+    float left
+    margin 10px 0
+    padding 0
+    list-style-type none
+    li
+      float left
+      margin-right 30px
+      a
+        robotoCond()
+        font-size 11px
+        text-transform uppercase
+        text-decoration underline
+        &:hover
+          text-decoration none
+      &.act a
+        color green
+        cursor default
+        &:hover
+          text-decoration underline
+  .social_links
+    float right
+    margin-top 10px
+    a
+      float left
+      margin-right 2px
+      opacity 0.5
+      transition transition
+      &:hover
+        opacity 1
+  .callback_block
+    absolute top 65px left 50%
+    margin-left -350px
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 50px
+      background #dedede
+  .callcenter_schedule
+    absolute top 65px left 50%
+    margin-left -20px
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 50px
+      background #dedede
+  .advantages
+    absolute top 65px left 50%
+    width 350px
+    height 90px
+    margin 0 0 0 230px
+    padding 0
+    list-style-type none
+    li
+      float left
+      position relative
+      width 20%
+      padding-top 60px
+      robotoCond()
+      font-size 11px
+      line-height 14px
+      font-weight 300
+      text-transform uppercase
+      text-align center
+      color #333333
+      &:before
+        content " "
+        absolute top 5px left 50%
+        width 40px
+        height 40px
+        margin-left -20px
+        background url(../images/icons_advantages.png) no-repeat
+      &.money:before
+        background-position 0 0
+      &.car:before
+        background-position -40px 0
+      &.locket:before
+        background-position -80px 0
+      &.gears:before
+        background-position -120px 0
+      &.percent:before
+        background-position -160px 0
+
+  .wide_menu
+    position relative
+    top 0
+    left 0
+    z-index 10
+    min-width 1160px
+    width 100%
+    height 40px
+    padding 5px 0
+    background #eaeaea
+    border-top 1px solid #cccccc
+    border-bottom 1px solid #cccccc
+    &.fixed
+      position fixed
+      z-index 20
+      box-shadow 0 0 10px #000000
+      .product_page &
+        .menu_dropdown
+        .search_block
+        .personal_page_btn
+          display none
+        .reduced_product_info
+        .compare_btn
+          display block
+      .category_page &
+        .personal_page_btn
+          display none
+        .compare_btn
+          display block
+    .max_width
+      height 100%
+  .menu_dropdown
+    float left
+    position relative
+    width 240px
+    height 100%
+    margin-right 7px
+    background purple
+    border-radius 3px
+    border-left 2px solid purple
+    border-right 2px solid purple
+    cursor pointer
+    user-select none
+    &.act
+      border-bottom-left-radius 0
+      border-bottom-right-radius 0
+      .menu_dropdown_list
+        opacity 1
+        visibility visible
+    .burger
+      position relative
+      height 24px
+      margin 0
+      padding 8px 0 8px 40px
+      font-size 11px
+      line-height 11px
+      font-weight 300
+      text-transform uppercase
+      color #ffffff
+      &:before
+        content " "
+        absolute top 50% left 5px
+        width 30px
+        height 30px
+        margin (-@width / 2) 0 0
+        background url(../images/sprite_menu_dropdown.png) 0 0 no-repeat
+      span
+        font-size 14px
+        font-weight bold
+    .menu_dropdown_list
+      absolute top 100% left
+      width 100%
+      margin 0 0 0 -2px
+      padding 0
+      list-style-type none
+      border-top 6px solid purple
+      border-left 2px solid purple
+      border-right 2px solid purple
+      border-bottom 2px solid purple
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+      opacity 0
+      visibility hidden
+      transition transition
+      li
+        position relative
+        height 40px
+        border-bottom 1px solid purple
+        background #ffffff
+        overflow hidden
+        cursor pointer
+        transition transition
+        a
+          position relative
+          z-index 2
+          display block
+          height 100%
+          padding-left 50px
+          font-size 11px
+          line-height 40px
+          letter-spacing -0.5px
+          text-transform uppercase
+          color #555555
+        &:last-child
+          border-bottom none
+        &:before
+        &:after
+          content " "
+          absolute top 50% left 10px
+          width 30px
+          height 30px
+          margin (-@width / 2) 0 0
+          background url(../images/sprite_menu_dropdown.png) no-repeat
+          transition transition
+        &:after
+          opacity 0
+          .no-svg
+            display none
+        for num in 1..12
+          &.mdl_{num}:before
+            background-position unit((num * -30), 'px') 0
+          &.mdl_{num}:after
+            background-position unit((num * -30), 'px') -30px
+        &.act
+        &:hover
+          background purple
+          a
+            color #ffffff
+          &:before
+            opacity 0
+            .no-svg
+              display none
+          &:after
+            opacity 1
+            .no-svg
+              display block
+  .search_block
+    float left
+    position relative
+    width 425px
+    height 100%
+    margin-right 7px
+    background #ffffff
+    border-radius 3px
+    .form
+      position relative
+      height 100%
+    .field
+      margin 0
+      .placeholder
+        font-size 15px
+        font-weight 300
+        text-transform uppercase
+        color #999999
+      .input_holder
+        padding 0 18px
+      input
+        height 14px
+        border-color purple
+        border-width 2px
+    .submit
+      absolute top right
+      height 100%
+      input
+        width 40px
+        height 40px
+        padding 0
+        border none
+        background url(../images/sprite.png) 0 -80px no-repeat
+    .search_results
+      absolute top 100% left -2px
+      right 0
+      margin-top -3px
+      border-left 2px solid purple
+      border-right 2px solid purple
+      border-bottom 2px solid purple
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+      background #ffffff
+      opacity 0
+      visibility hidden
+      transition transition
+      &.act
+        opacity 1
+        visibility visible
+      h3
+        margin 0
+        padding 0 17px
+        font-size 10px
+        font-weight normal
+        text-transform uppercase
+        color #888888
+      .search_results_category
+        a
+          display block
+          padding 3px 17px
+          font-size 10px
+          text-transform uppercase
+          text-decoration underline
+          color purple
+          background transparent
+          &:hover
+            text-decoration none
+            background-color #f7f7f7
+      .search_results_products
+        margin 10px 0 0
+        border-bottom 1px solid #eaeaea
+        .search_results_products_item
+          position relative
+          min-height 80px
+          border-top 1px solid #eaeaea
+        .photo
+          absolute top 10px left 10px
+          width 60px
+          height 60px
+          overflow hidden
+          img
+            absolute top left
+            right 0
+            bottom 0
+            margin auto
+        .name
+          display block
+          padding 10px 110px 0 80px
+          font-size 12px
+          text-transform uppercase
+          text-decoration none
+          color #000
+          &:hover
+            text-decoration underline
+            color purple
+        .price
+          absolute top right
+          bottom 0
+          width 100px
+          padding-top 30px
+          border-left 1px solid #eaeaea
+          font-size 16px
+          font-weight bold
+          text-align center
+          color #000
+          span
+            font-size 9px
+            font-weight normal
+            text-transform uppercase
+      .search_show_all
+        display block
+        padding 15px 17px
+        font-size 10px
+        font-weight bold
+        text-transform uppercase
+        text-decoration underline
+        color purple
+        &:hover
+          text-decoration none
+  .personal_page_btn
+    float left
+    position relative
+    width 110px
+    height 100%
+    margin-right 7px
+    border-radius 3px
+    background #ffffff
+    cursor pointer
+    &:after
+      content " "
+      absolute top left
+      right 0
+      bottom 0
+      border 1px solid #dddddd
+      border-radius 3px
+    > p
+      position relative
+      margin 0
+      padding 19px 0 0
+      font-size 9px
+      text-transform uppercase
+      text-decoration underline
+      text-align center
+      color #333333
+      &:before
+        content " "
+        absolute top 1px left 50%
+        width 20px
+        height 20px
+        margin-left (-@width / 2)
+        background url(../images/sprite.png) -40px -20px no-repeat
+    .menu_bubble
+      absolute top 100% left 50%
+      z-index 2
+      width 170px
+      margin-top 5px
+      margin-left (-@width / 2)
+      background #ffffff
+      border-radius 3px
+      border 1px solid #666666
+      cursor default
+      opacity 0
+      visibility hidden
+      transition transition
+      &.act
+        opacity 1
+        visibility visible
+      &:before
+        content " "
+        absolute top left
+        width 100%
+        height 11px
+        margin-top -11px
+      &:after
+        content " "
+        absolute top left 50%
+        width 20px
+        height 11px
+        margin -10px 0 0 -10px
+        background url(../images/sprite.png) -60px 0 no-repeat
+      &.wide
+        width 240px
+        padding 10px
+        margin-left ( -((@width / 2) + @padding) )
+  .reduced_product_info
+    float left
+    display none
+    position relative
+    width 676px
+    height 100%
+    margin-right 7px
+    border-radius 3px
+    background #ffffff
+    cursor pointer
+    &:before
+      content " "
+      absolute top left
+      right 0
+      bottom 0
+      border 1px solid #dddddd
+      border-radius 3px
+    .photo
+      float left
+      margin 2px 5px
+      width 40px
+      height 35px
+      overflow hidden
+      img
+        display block
+        margin 0 auto
+        width auto
+        height 100%
+    .name
+      position relative
+      margin 3px 0 0
+      width 350px
+      height 15px
+      font-size 13px
+      line-height 14px
+      text-transform uppercase
+      color #000
+      white-space nowrap
+      overflow hidden
+      &:after
+        content " "
+        absolute top right
+        width 40px
+        height 100%
+        background linear-gradient(to right, transparent, #ffffff)
+    .links
+      absolute top 20px left 50px
+      font-size 10px
+      line-height 14px
+      text-transform uppercase
+      a
+        display inline-block
+        margin-left 5px
+        text-decoration underline
+        color purple
+        &:hover
+          text-decoration none
+        &:first-child
+          margin-left 0
+      span
+        color #888888
+    .price
+      absolute top left 405px
+      height 40px
+      line-height 37px
+      font-size 18px
+      font-weight bold
+      text-transform uppercase
+      color #000
+      span
+        font-size 9px
+    .btn
+      absolute top 5px left 480px
+      padding 5px 20px
+    .favorite_add
+    .favorite_remove
+      absolute top 10px right 10px
+      display none
+      letter-spacing -0.5px
+      &.act
+        display block
+  .compare_btn
+    float left
+    display none
+    position relative
+    width 110px
+    height 100%
+    margin-right 7px
+    border-radius 3px
+    background #ffffff
+    cursor pointer
+    &:before
+      content " "
+      absolute top left
+      right 0
+      bottom 0
+      border 1px solid #dddddd
+      border-radius 3px
+    > p
+      position relative
+      margin 0
+      padding 8px 0 0 40px
+      font-size 9px
+      line-height 12px
+      text-transform uppercase
+      color #888888
+      &:before
+        content " "
+        absolute top left
+        width 40px
+        height 40px
+        background url(../images/sprite.png) -360px 0 no-repeat
+      span
+        text-decoration underline
+        color purple
+    .menu_bubble
+      absolute top 100% left 50%
+      z-index 2
+      width 180px
+      margin-top 5px
+      margin-left (-@width / 2)
+      padding 10px 0
+      background #ffffff
+      border-radius 3px
+      border 1px solid #666666
+      cursor default
+      opacity 0
+      visibility hidden
+      transition transition
+      &.act
+        opacity 1
+        visibility visible
+      &:before
+        content " "
+        absolute top left
+        width 100%
+        height 11px
+        margin-top -11px
+      &:after
+        content " "
+        absolute top left 50%
+        width 20px
+        height 11px
+        margin -10px 0 0 -10px
+        background url(../images/sprite.png) -60px 0 no-repeat
+      a
+        position relative
+        display inline-block
+        height 20px
+        margin-left 15px
+        padding-left 25px
+        font-size 9px
+        line-height 20px
+        text-transform uppercase
+        text-decoration underline
+        color purple
+        &:before
+          content " "
+          absolute top left
+          width 20px
+          height 20px
+          background url(../images/sprite.png) -340px -40px no-repeat
+        &:hover
+          text-decoration none
+      span
+        display inline-block
+        height 20px
+        font-size 9px
+        line-height 20px
+        text-transform uppercase
+        color #555555
+  .smart_club_btn
+    float left
+    position relative
+    width 80px
+    height 100%
+    margin-right 7px
+    padding-right 45px
+    border-radius 3px
+    background #ffffff
+    cursor pointer
+    &:after
+      content " "
+      absolute top left
+      right 0
+      bottom 0
+      border 1px solid #dddddd
+      border-radius 3px
+    > p
+      position relative
+      margin 0
+      padding 19px 0 0
+      font-size 11px
+      text-transform uppercase
+      text-align center
+      color orange
+      &:before
+        content " "
+        absolute top 1px left 50%
+        width 20px
+        height 20px
+        margin-left (-@width / 2)
+        background url(../images/sprite.png) -40px -40px no-repeat
+    .points
+      absolute top right
+      width 45px
+      height 100%
+      font-size 14px
+      font-weight 300
+      line-height 40px
+      text-align center
+      color #000
+      &:before
+        content " "
+        absolute top left
+        width 1px
+        height 100%
+        background #dddddd
+    .menu_bubble
+      absolute top 100% left 50%
+      z-index 2
+      width 140px
+      margin-top 5px
+      margin-left (-@width / 2)
+      background #ffffff
+      border-radius 3px
+      border 1px solid orange
+      cursor default
+      opacity 0
+      visibility hidden
+      transition transition
+      &.act
+        opacity 1
+        visibility visible
+      &:before
+        content " "
+        absolute top left
+        width 100%
+        height 11px
+        margin-top -11px
+      &:after
+        content " "
+        absolute top left 50%
+        width 20px
+        height 11px
+        margin -10px 0 0 -10px
+        background url(../images/sprite.png) -80px 0 no-repeat
+  .bucket_btn
+    float left
+    position relative
+    width 220px
+    height 36px
+    border-radius 3px
+    border 2px solid orange
+    background #ffffff
+    cursor pointer
+    &:before
+      content " "
+      absolute top right
+      width 55px
+      height 36px
+      background orange
+    &:after
+      content " "
+      absolute top right 10px
+      width 36px
+      height 36px
+      background url(../images/sprite.png) -2px -122px no-repeat
+    &.act
+      &:before
+        background #ffffff
+      &:after
+        background-position -2px -162px
+      .bucket_list
+        opacity 1
+        visibility visible
+    .bucket_count
+      absolute top left
+      margin 5px 0 0 7px
+      font-size 10px
+      line-height @font-size
+      text-transform uppercase
+      color #000
+      span
+        color orange
+        &.bucket_number
+          margin-left 3px
+          font-size 12px
+    .bucket_cost
+      absolute top left
+      margin 20px 0 0 7px
+      font-size 10px
+      line-height @font-size
+      text-transform uppercase
+      color #000
+      .bucket_price
+        margin-left 3px
+        font-size 12px
+    .bucket_list
+      absolute top 100% left
+      width 100%
+      margin-left -2px
+      padding-top 7px
+      background #ffffff
+      border-left 2px solid orange
+      border-right 2px solid orange
+      border-bottom 2px solid orange
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+      cursor default
+      opacity 0
+      visibility hidden
+      transition transition
+      > div
+        &:before
+          content " "
+          absolute top left 10px
+          right 10px
+          height 1px
+          background url(../images/horizontal_line_pattern.png) 0 0 repeat-x
+        &:first-child:before
+          display none
+    .bucket_item
+      position relative
+      padding-bottom 10px
+      .photo
+        absolute top 15px left 5px
+        width 50px
+        height 60px
+        overflow hidden
+        img
+          display block
+          width auto
+          height 100%
+          margin 0 auto
+      .info
+        position relative
+        padding 15px 15px 0 60px
+      .name
+        display block
+        margin-bottom 5px
+        font-size 11px
+        line-height 13px
+        font-weight 300
+        text-transform uppercase
+        text-decoration underline
+        color purple
+        &:hover
+          text-decoration none
+      .amount
+        font-size 11px
+        line-height 20px
+        color #000
+      .controls
+        position relative
+        height 20px
+      .favorite_add
+      .favorite_remove
+        absolute top left
+        margin-left -5px
+        padding-left 20px
+        font-size 10px
+        line-height 20px
+        text-transform none
+        text-decoration underline
+        color purple
+        cursor pointer
+        display none
+        &:before
+          content " "
+          absolute top left
+          width 20px
+          height 20px
+          background url(../images/sprite.png) no-repeat
+        &.act
+          display block
+        &:hover
+          text-decoration none
+      .favorite_add:before
+        background-position -100px 0
+      .favorite_remove:before
+        background-position -120px 0
+      .bucket_remove
+        absolute top right
+        padding-left 20px
+        font-size 10px
+        line-height 20px
+        text-decoration underline
+        cursor pointer
+        color #f13c3d
+        &:before
+          content " "
+          absolute top left
+          width 20px
+          height 20px
+          background url(../images/sprite.png) -140px 0 no-repeat
+        &:hover
+          text-decoration none
+    .gotobucket
+      display block
+      margin 0 5px 5px
+      padding 8px 0
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+.almost_footer
+  margin 20px 0 0
+  padding-bottom 20px
+  clearfix()
+  border-bottom 1px solid #dddddd
+
+.all_cities
+  float left
+  width 48%
+  .title
+    position relative
+    padding-left 40px
+    font-size 14px
+    line-height 40px
+    font-weight 300
+    text-transform uppercase
+    &:before
+      content " "
+      absolute top 50% left
+      width 40px
+      height 40px
+      margin-top (-@height / 2)
+      background url(../images/sprite.png) 0 -200px no-repeat
+  .list
+    margin 10px 0 0
+    padding 0
+    list-style-type none
+    clearfix()
+    li
+      float left
+      width 20%
+      height 20px
+      margin-right 5%
+    a
+      position relative
+      padding-left 20px
+      display inline-block
+      vertical-align top
+      font-size 10px
+      line-height 20px
+      text-transform uppercase
+      text-decoration underline
+      color #555555
+      &:hover
+        text-decoration none
+        color orange
+        &:before
+          margin-left -8px
+      &:before
+        content " "
+        absolute top left
+        width 20px
+        height 20px
+        margin-left 0
+        background url(../images/sprite.png) -220px -20px no-repeat
+        transition transition
+
+.seo_block
+  float right
+  width 48%
+  &.act
+    .text
+      max-height 500px
+    .read_more:after
+      margin-top 0
+      background-position -200px -40px
+  .title
+    font-size 14px
+    line-height 40px
+    font-weight 300
+    text-transform uppercase
+  .text
+    margin 10px 0 0
+    max-height 170px
+    overflow hidden
+    transition transition
+  p
+    margin 5px 0 0
+    font-size 11px
+    line-height 14px
+    text-align justify
+    color #555555
+    &:first-child
+      margin 0
+  .read_more
+    position relative
+    display inline-block
+    margin 10px 0 0
+    vertical-align top
+    font-size 10px
+    line-height 20px
+    font-weight 300
+    text-transform uppercase
+    text-decoration underline
+    color #555555
+    cursor pointer
+    &:hover
+      text-decoration none
+    &:after
+      content " "
+      absolute top left 100%
+      width 20px
+      height 20px
+      margin 2px 0 0 2px
+      background url(../images/sprite.png) -200px -20px no-repeat
+
+.footer
+  absolute left bottom
+  width 100%
+  height 185px
+  padding-top 15px
+  .callback_block
+    absolute top 15px left 50%
+    margin-left -575px
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 15px
+      background #dedede
+  .callcenter_schedule
+    absolute top 15px left 50%
+    margin-left -315px
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 20px
+      background #dedede
+  .booking_block
+    absolute top 15px left 50%
+    width 165px
+    height 90px
+    margin-left -105px
+    font-size 10px
+    line-height 14px
+    letter-spacing -0.5px
+    text-transform uppercase
+    text-align center
+    color #ff3e3e
+    &:before
+      content " "
+      absolute top left 50%
+      width 60px
+      height 60px
+      margin-left (-@width / 2)
+      background url(../images/sprite.png) -40px -200px no-repeat
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 10px
+      background #dedede
+    p
+      margin 60px 0 0
+      font-size 13px
+  .footer_share_block
+    absolute top 15px left 50%
+    width 300px
+    height 90px
+    margin-left 80px
+    .title
+      robotoCond()
+      font-size 11px
+      font-weight 300
+      text-transform uppercase
+      text-align center
+      color #444444
+    &:after
+      content " "
+      absolute top left 100%
+      width 1px
+      height 100%
+      margin-left 10px
+      background #dedede
+  .social_links
+    absolute top 15px left 50%
+    width 170px
+    height 30px
+    padding-top 60px
+    overflow hidden
+    margin-left 405px
+    .title
+      absolute top left
+      width 100%
+      robotoCond()
+      font-size 11px
+      font-weight bold
+      text-transform uppercase
+      color #444444
+    a
+      float left
+      margin-right 2px
+      opacity 0.5
+      transition transition
+      &:hover
+        opacity 1
+  .copyright
+    absolute top 150px left 50%
+    height 30px
+    margin-left -575px
+    font-size 11px
+    line-height 13px
+    font-weight 300
+    color #555555
+
+/* =============================================================================
+   Middle
+   ========================================================================== */
+.middle
+  padding 0 0 200px
+
+.hr
+  display block
+  width 100%
+  height 1px
+  background #f1f1f1
+
+.callback_block
+  position relative
+  width 230px
+  height 90px
+  &.fall_out_up
+    .callback_select
+      .callback_select_opts
+        top auto
+        bottom 15px
+  .cb_label
+    absolute top left
+    width 120px
+    robotoCond()
+    font-size 12px
+    font-weight 300
+    text-transform uppercase
+    color #444444
+  .callback_select
+    absolute top right
+    z-index 2
+    width 110px
+    height 15px
+    padding-bottom 2px
+    border-bottom 1px solid orange
+    font-size 12px
+    text-transform uppercase
+    color purple
+    cursor pointer
+    &:after
+      content " "
+      absolute top right
+      width 20px
+      height 20px
+      background url(../images/sprite.png) -40px 0 no-repeat
+    &.act
+      .callback_select_opts
+        opacity 1
+        visibility visible
+    .cb_city_act
+      font-weight bold
+    .callback_select_opts
+      absolute top 15px left
+      width 200px
+      margin 2px -10px
+      border 1px solid orange
+      background #ffffff
+      font-weight normal
+      opacity 0
+      visibility hidden
+      transition transition
+      .opt
+        padding 0 10px
+        cursor pointer
+        &:hover
+        &.act
+          background #eaeaea
+  b
+    absolute top 33px left 35px
+    font-size 15px
+    line-height 12px
+    text-transform uppercase
+    color orange
+    cursor pointer
+    &:before
+      content " "
+      absolute top right 100%
+      width 40px
+      height 40px
+      margin -6px -2px
+      background url(../images/sprite.png) 0 0 no-repeat
+    span
+      font-size 12px
+      font-weight 300
+      letter-spacing -1px
+  .cb_phones
+    absolute top 30px right
+    width 120px
+    height 60px
+    font-size 14px
+    font-weight 300
+    .cb_phone
+      absolute top right
+      width 100%
+      height 100%
+      text-align right
+      opacity 0
+      visibility hidden
+      &.act
+        opacity 1
+        visibility visible
+
+.callcenter_schedule
+  position relative
+  width 180px
+  height 90px
+  .title
+    robotoCond()
+    font-size 12px
+    font-weight 300
+    text-transform uppercase
+    text-align center
+    color #444444
+  .time
+    absolute top 30px right
+    width 100%
+    height 40px
+    robotoCond()
+    font-size 14px
+    font-weight 300
+    text-align right
+    &:before
+      content " "
+      absolute top left -6px
+      width 40px
+      height 40px
+      background url(../images/sprite.png) 0 -40px no-repeat
+  .subtitle
+    absolute top 70px left
+    width 100%
+    robotoCond()
+    font-size 14px
+    font-weight 300
+    text-align center
+    color purple
+
+.login_block
+.forgot_block
+  position relative
+  clearfix()
+  p
+    margin 0
+    font-size 11px
+    color #555555
+  .title
+    font-size 11px
+    text-transform uppercase
+    text-align center
+    color #000
+  .field
+    margin-bottom 5px
+    .placeholder
+      padding 10px 10px
+      font-size 11px
+      line-height @font-size
+      color #aaaaaa
+    .input_holder
+      padding 0 10px
+    input
+      margin 0 -10px
+      padding 10px 9px
+      border-color #666666
+      font-size 11px
+      line-height @font-size
+  .submit
+    margin 15px 0 8px
+    input
+      width 100%
+      padding 8px 0
+      background #6a6a6a
+      border none
+      border-radius 3px
+      font-size 12px
+      text-transform uppercase
+      color #ffffff
+      box-shadow inset 0 -15px 30px #404040
+      &:hover
+        box-shadow inset 0 15px 30px #404040
+  .pp_registration
+  .pp_forgot
+  .pp_backtologin
+    float left
+    position relative
+    margin-bottom 10px
+    font-size 11px
+    text-transform uppercase
+    text-decoration underline
+    color #555555
+    cursor pointer
+    &:hover
+      color purple
+  .pp_forgot
+    float right
+  .pp_backtologin
+    padding-left 20px
+    &:before
+    &:after
+      content " "
+      absolute top left
+      width 20px
+      height 20px
+      background url(../images/sprite.png) -60px -20px no-repeat
+      transition transition
+    &:after
+      opacity 0
+      .no-svg &
+        display none
+    &:hover
+      &:before
+        opacity 0
+        .no-svg &
+          display none
+      &:after
+        opacity 1
+        .no-svg &
+          display block
+  .social_links
+    float none
+    margin 0
+    clearfix()
+    a
+      opacity 1
+.forgot_block
+  p
+    line-height 13px
+  .field
+    margin-top 10px
+
+.registration_block
+  position relative
+  p
+    margin 10px 0 0
+    font-size 12px
+    color #555555
+    &.star_hint
+      padding-left 80px
+      font-size 10px
+      text-transform uppercase
+    &.terms_agree
+      padding-left 80px
+      font-size 11px
+      line-height 12px
+      font-weight 300
+      color #000
+      a
+        text-decoration underline
+        &:hover
+          text-decoration none
+  .title
+    font-size 11px
+    text-transform uppercase
+    text-align center
+    color #000
+  .registration_social
+    margin 10px 0 0
+    span
+      display inline-block
+      vertical-align middle
+      font-size 12px
+      color #555555
+    .social_links
+      display inline-block
+      vertical-align middle
+      margin-left 5px
+    p
+      margin 0 0 10px 0
+  .form
+    width 630px
+    margin 10px auto 0
+  .field
+    clearfix()
+    margin-bottom 10px
+    p
+      margin 10px 0 0
+      float left
+      padding-left 80px
+      width 200px
+      &.hint
+        width 350px
+        margin 3px 0 0 0
+        padding-left 280px
+        font-size 11px
+        line-height 12px
+    .input_holder
+      float left
+      width 255px
+      margin-top 5px
+      padding 0 10px 0 7px
+    input
+      margin 0 -7px
+      padding 5px 7px
+      font-size 12px
+      border-color #c0c0c0
+    .placeholder
+      padding 5px 7px
+  .field_phone
+    .input_holder
+      &.code
+        width 25px
+        margin-right 5px
+      &.subcode
+        width 25px
+        margin-right 5px
+      &.phone
+        width 160px
+  .field_subscribe
+    padding-left 280px
+    .input_holder
+      width 350px
+      padding 0
+    label
+      position relative
+      display block
+      font-size 11px
+      line-height 12px
+      user-select none
+      &.custom_checkbox
+        padding-left 25px
+        input
+          display none
+        &:before
+          content " "
+          absolute top left
+          width 20px
+          height 20px
+          margin-top -1px
+          background url(../images/sprite.png) -280px -60px no-repeat
+        &.checked:before
+          background-position -300px -60px
+      span
+        vertical-align top
+  .submit
+    margin 20px 0 0
+    text-align center
+    .btn
+      padding 15px 30px
+      font-size 14px
+
+
+.pp_list_block
+  position relative
+  a
+    position relative
+    display block
+    background #ffffff
+    padding-left 30px
+    border-bottom 1px solid #666666
+    font-size 10px
+    line-height 30px
+    text-transform uppercase
+    color #555555
+    &:first-child
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+    &:last-child
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+      border-bottom none
+    &:before
+    &:after
+      content " "
+      absolute top 50% left 5px
+      width 20px
+      height 20px
+      margin-top (-@height / 2)
+      background url(../images/sprite.png) no-repeat
+      transition transition
+    &:after
+      opacity 0
+      .no-svg &
+        display none
+    &.orders
+      &:before
+        background-position -80px -20px
+      &:after
+        background-position -80px -40px
+    &.wishes
+      &:before
+        background-position -100px -20px
+      &:after
+        background-position -100px -40px
+    &.my_data
+      &:before
+        background-position -120px -20px
+      &:after
+        background-position -120px -40px
+    &.exit
+      &:before
+        background-position -140px -20px
+      &:after
+        background-position -140px -40px
+    &:hover
+      background #666666
+      color #ffffff
+      &:before
+        opacity 0
+        .no-svg &
+          display none
+      &:after
+        opacity 1
+        .no-svg &
+          display block
+
+.sc_list_block
+  position relative
+  a
+    position relative
+    display block
+    padding 0 5px
+    background #ffffff
+    border-bottom 1px solid orange
+    font-size 10px
+    line-height 30px
+    text-transform uppercase
+    color #555555
+    &:first-child
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+    &:last-child
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+      border-bottom none
+    &:hover
+      background orange
+      color #ffffff
+
+.breadcrumbs
+  position relative
+  margin 13px 0 0 -5px
+  padding-left 25px
+  font-size 9px
+  line-height 20px
+  text-transform uppercase
+  &:before
+    content " "
+    absolute top left
+    width 20px
+    height 20px
+    background url(../images/sprite.png) -220px -40px no-repeat
+  a
+    display inline-block
+    vertical-align middle
+    margin 0 2px
+    text-decoration underline
+    color purple
+    &:hover
+      text-decoration none
+  span
+    display inline-block
+    vertical-align middle
+    margin 0 2px
+    color #cccccc
+
+.pager_block
+  padding 20px 0 0
+  text-align center
+  .btn
+    width 300px
+    padding 20px 0
+    font-size 16px
+  .category_pages
+    ul
+      display inline-block
+      margin 0
+      padding 20px 0
+      text-align center
+      list-style-type none
+    li
+      display inline-block
+      margin 0
+      padding 0
+      height 22px
+      border-radius 3px
+      border 1px solid purple
+      font-size 12px
+      line-height 20px
+      transition transition
+      &:hover
+        background purple
+        a,span
+          color #ffffff
+      &.act
+        background #888888
+        border-color #888888
+        a,span
+          color #ffffff
+      &.dots
+        background transparent
+        border-color transparent
+        a,span
+          color purple
+      a,span
+        display block
+        height 100%
+        padding 0 10px
+        text-decoration none
+        background transparent
+        color purple
+        transition transition
+
+.link_feedbacks
+  position relative
+  margin 0 0 0 -3px
+  padding-left 25px
+  font-size 10px
+  line-height 20px
+  text-transform uppercase
+  text-decoration underline
+  color purple
+  cursor pointer
+  &:before
+    content " "
+    absolute top left
+    width 20px
+    height 20px
+    background url(../images/sprite.png) -160px -20px no-repeat
+  &:hover
+    text-decoration none
+
+.rating
+  position relative
+  margin 0
+  padding-right 70px
+  robotoCond()
+  font-size 10px
+  line-height 20px
+  text-transform uppercase
+  &:after
+    content " "
+    absolute top right
+    width 65px
+    height 20px
+    background url(../images/sprite_stars_small.png) no-repeat
+  for num in 0..5
+    &.stars_{num}:after
+      background-position 0 (num * -40px)
+    &.stars_{num}half:after
+      background-position 0 ((num * -40px) - 20px)
+
+.compare_add
+.compare_go
+.favorite_add
+.favorite_remove
+  position relative
+  padding-left 25px
+  font-size 10px
+  line-height 20px
+  text-transform uppercase
+  text-decoration underline
+  cursor pointer
+  &:before
+    content " "
+    absolute top left
+    width 20px
+    height 20px
+    background url(../images/sprite.png) no-repeat
+  &:hover
+    text-decoration none
+.compare_add
+.compare_go
+  display none
+  float left
+  width 75px
+  margin-left -3px
+  &.act
+    display block
+.compare_add
+  color purple
+  &:before
+    background-position -160px -40px
+.compare_go
+  color #f13c3d
+  &:before
+    background-position -180px -40px
+.favorite_add
+.favorite_remove
+  float right
+  color purple
+.favorite_add
+  &:before
+    background-position -180px -20px
+.favorite_remove
+  &:before
+    background-position -360px -40px
+
+.live_timer
+  position relative
+  margin 0
+  .title
+    margin-bottom 3px
+    padding-left 4px
+    font-size 11px
+    line-height 13px
+    letter-spacing -0.6px
+    font-weight 300
+    text-transform uppercase
+    color #666666
+  .time
+    span
+      display inline-block
+      width 30px
+      height 20px
+      padding-left 6px
+      font-size 20px
+      line-height 18px
+      letter-spacing 3px
+      font-weight 300
+      text-align center
+      color #ffffff
+      background url(../images/sprite.png) -380px -40px no-repeat
+  .labels
+    absolute top 38px left
+    font-size 11px
+    line-height 11px
+    text-align center
+    span
+      float left
+      width 30px
+      padding-left 6px
+
+
+.product_badges_holder
+  absolute top 40px left
+  z-index 2
+  .badge
+    margin-bottom 5px
+  .badge_mini
+    margin-bottom 3px
+.badge
+  display block
+  width 120px
+  height 50px
+  background url(../images/sprite_badges.png) no-repeat
+  for num in 0..7
+    &.badge_type_{num + 1}
+      background-position 0 (num * -50px)
+.badge_mini
+  display block
+  width 40px
+  height 30px
+  background url(../images/sprite_badges_mini.png) no-repeat
+  for num in 0..9
+    &.badge_type_{num + 1}
+      background-position 0 (num * -40px)
+
+.tab_title
+  position relative
+  margin 20px 0 0
+  border-bottom 1px solid #dddddd
+  p
+    display inline-block
+    margin 0
+    padding 0 10px
+    font-size 14px
+    line-height 40px
+    font-weight 300
+    text-transform uppercase
+    border-top 1px solid #dddddd
+    border-left 1px solid #dddddd
+    border-right 1px solid #dddddd
+    border-top-left-radius 3px
+    border-top-right-radius 3px
+  a.pull_right
+    absolute bottom right
+    padding 10px 5px
+    font-size 10px
+    line-height 20px
+    font-weight bold
+    text-transform uppercase
+    text-decoration underline
+    color purple
+    &:hover
+      text-decoration none
+    .icon
+      margin-right 5px
+
+.form_review
+  position relative
+  height 315px
+  label
+    display block
+    height 20px
+    margin 5px 0
+    font-size 10px
+    line-height 20px
+    text-transform uppercase
+    color #000
+  .field
+    margin-bottom 0
+    .input_holder
+      padding 0 13px
+    input
+    textarea
+      margin 0px -13px
+      padding 5px 10px
+      border 1px solid #aaaaaa
+    textarea
+      height 60px
+      resize none
+    .placeholder
+      font-size 10px
+      line-height 19px
+      text-transform uppercase
+      color #aaaaaa
+      padding 6px 10px
+    &.error
+      input
+      textarea
+        border-color red
+  .star
+    position relative
+    float right
+    width 20px
+    height 20px
+    padding-right 5px
+    cursor pointer
+    &:before
+    &:after
+      content " "
+      absolute top left
+      width 20px
+      height 20px
+      background url(../images/sprite.png) -340px 0 no-repeat
+    &:after
+      background-position -340px -20px
+      opacity 0
+      .no-svg &
+        display none
+    &.act
+    &:hover
+      &:before
+        opacity 0
+        .no-svg &
+          display none
+      &:after
+        opacity 1
+        .no-svg &
+          display block
+      ~ span
+        &:before
+          opacity 0
+          .no-svg &
+            display none
+        &:after
+          opacity 1
+          .no-svg &
+            display block
+  .field_name
+    absolute top left 10px
+    width 185px
+  .field_email
+    absolute top left 205px
+    width 185px
+  .field_stars
+    absolute top left 450px
+    width 125px
+    .input_holder
+      margin-top 4px
+      padding 0
+  .field_text
+    absolute top 65px left 10px
+    width 290px
+    textarea
+      height 145px
+  .field_pros
+    absolute top 95px left 305px
+    width 305px
+  .field_cons
+    absolute top 180px left 305px
+    width 305px
+  .field_subscribe
+    absolute top 270px left 10px
+    .checkbox
+      float left
+      width auto
+      margin-right 5px
+    span
+      float left
+      font-size 10px
+      line-height 13px
+      text-transform uppercase
+      color #000
+  .submit
+    absolute top 270px right 15px
+
+/*********************
+ Main page
+ *********************/
+.submenu_bar
+  padding 10px 0 25px
+  clearfix()
+  a
+    position relative
+    float left
+    width 145px
+    height 20px
+    padding-top 100px
+    robotoCond()
+    font-size 12px
+    line-height 16px
+    text-transform uppercase
+    text-align center
+    color #666666
+    &:before
+      content " "
+      absolute top left
+      width 150px
+      height 100px
+      background url(../images/sprite_submenu.png) no-repeat
+    for num in 1..8
+      &.sbmb_{num}
+        &:before
+          background-position ((num - 1) * -150px) 0
+        &:hover
+          color purple
+          &:before
+            background-position ((num - 1) * -150px) -100px
+
+.main_slider
+  .bx-pager
+    padding 0
+    bottom 0
+    a
+      background #ffffff !important
+      border 1px solid purple
+      &.active
+        background purple !important
+  .bx-wrapper
+    .bx-controls-direction
+      .bx-prev
+      .bx-next
+        top auto
+        bottom 4px
+        width 20px
+        height 20px
+        background url(../images/sprite.png) no-repeat
+      .bx-prev
+        left auto
+        right 50%
+        background-position -160px 0
+      .bx-next
+        left 50%
+        right auto
+        background-position -180px 0
+
+.main_corner_slider
+  padding 20px
+  background #f7f7f7
+  clearfix()
+  .bx-wrapper
+    .bx-controls-direction
+      .bx-prev
+      .bx-next
+        width 80px
+        height 140px
+        margin-top -100px
+        background url(../images/sprite.png) no-repeat
+      .bx-prev
+        left -27px
+        background-position -40px -60px
+      .bx-next
+        right -27px
+        background-position -120px -60px
+
+.tabs_block
+  position relative
+  margin 20px 0 0
+  border-radius 3px
+  border-bottom 1px solid purple
+  overflow hidden
+  .tabs_header
+    background #ce77d4
+    box-shadow inset 0 -25px 50px #ae48b8
+    clearfix()
+    font-size 0
+    line-height 0
+    .tabs_header_title
+      position relative
+      display inline-block
+      margin-left 10px
+      padding 14px 40px
+      font-size 14px
+      line-height 26px
+      vertical-align middle
+      text-transform uppercase
+      text-align center
+      color #ffffff
+      &:before
+        content " "
+        absolute top left
+        width 40px
+        height 40px
+        margin 7px
+      &.has_icon_smart
+        padding-left 55px
+        &:before
+          background url(../images/sprite.png) -160px -360px no-repeat
+      &.has_icon_similar
+        padding-left 55px
+        &:before
+          background url(../images/sprite.png) -200px -360px no-repeat
+      &.has_icon_lastseen
+        padding-left 55px
+        &:before
+          background url(../images/sprite.png) -240px -360px no-repeat
+    .tabs_selector
+      position relative
+      display inline-block
+      padding 14px 20px
+      font-size 10px
+      line-height 26px
+      vertical-align middle
+      text-transform uppercase
+      text-align center
+      color #ffffff
+      cursor pointer
+      transition transition
+      &:after
+        content " "
+        display none
+        absolute bottom left 50%
+        margin-left -7px
+        border-left 7px solid transparent
+        border-right 7px solid transparent
+        border-bottom 7px solid #ffffff
+      &.act
+        background #913f98
+        &:after
+          display block
+      &.has_icon
+        padding-left 50px
+        &:before
+          content " "
+          absolute top 50% left 20px
+          width 25px
+          height 25px
+          margin -13px 0 0
+          background url(../images/sprite_tabs_icons.png) no-repeat
+        for num in 1..7
+          &.tab_icon_{num}:before
+            background-position ( (num - 1) * -25px) 0
+  .tabs_body
+    position relative
+    height 330px
+    padding 20px
+    &:before
+    &:after
+      content " "
+      position absolute
+      top 0
+      width 1px
+      height 100%
+      background purple
+    &:before
+      left 0
+    &:after
+      right 0
+    .tabs_tab
+      absolute top 20px left 20px
+      right 20px
+      bottom 20px
+      clearfix()
+      opacity 0
+      visibility hidden
+      transition transition
+      &.act
+        opacity 1
+        visibility visible
+      .bx-wrapper
+        .bx-controls-direction
+          .bx-prev
+          .bx-next
+            width 40px
+            height 40px
+            background url(../images/sprite.png) no-repeat
+          .bx-prev
+            left -25px
+            background-position 0 -280px
+          .bx-next
+            right -25px
+            background-position 0 -240px
+      .product_grid_item
+        float left
+        margin 10px
+  .tabs_footer
+    position relative
+    padding 20px
+    height 20px
+    background #f7f7f7
+    &:before
+    &:after
+      content " "
+      position absolute
+      top 0
+      width 1px
+      height 100%
+      background purple
+    &:before
+      left 0
+    &:after
+      right 0
+    a
+      absolute top 20px right 20px
+      padding-left 25px
+      font-size 10px
+      line-height 20px
+      font-weight bold
+      text-transform uppercase
+      text-decoration underline
+      color purple
+      &:before
+        content " "
+        absolute top left
+        width 20px
+        height 20px
+        background url(../images/sprite.png) -200px 0 no-repeat
+      &:hover
+        text-decoration none
+    .live_timer
+      absolute top 5px left 20px
+
+.overview_item
+  position relative
+  float left
+  width 240px
+  height 310px
+  margin 5px
+  padding 0 10px 10px 10px
+  border-radius 3px
+  overflow hidden
+  background #ffffff
+  box-shadow 0 0 5px #cacaca
+  &.video
+    p
+      padding-left 25px
+      &:before
+        content " "
+        absolute top -2px left
+        width 20px
+        height 20px
+        background url(../images/sprite.png) -320px -60px no-repeat
+    span
+      color purple
+  .overview_header
+    padding 3px 0 3px
+    font-size 11px
+    line-height 20px
+    color #999999
+    border-bottom 1px solid #cccccc
+    clearfix()
+    .date
+      float left
+    .lookup
+      float right
+      position relative
+      padding-left 20px
+      &:before
+        content " "
+        absolute top left
+        width 20px
+        height 20px
+        background url(../images/sprite.png) -240px 0 no-repeat
+  .photo
+    margin 10px 0 0
+    width 100%
+    height 160px
+    overflow hidden
+    img
+      display block
+      margin auto
+      width auto
+      height 100%
+  .video
+    margin 10px 0 0
+    width 100%
+    height 220px
+    overflow hidden
+    img
+    iframe
+      display block
+      width 100%
+      height auto
+      margin auto
+  .title
+    display block
+    margin 10px 0 0
+    padding 0 5px
+    font-size 11px
+    line-height 14px
+    text-transform uppercase
+    text-decoration underline
+    color purple
+    &:hover
+      text-decoration none
+  p
+    position relative
+    margin 10px 0 0
+    padding 0 5px
+    font-size 12px
+    line-height 14px
+    color #666666
+  .btn
+    margin 10px 0 0 5px
+    padding 5px 10px
+
+.main_categories_block
+  position relative
+  clearfix()
+  border-bottom 1px solid #dddddd
+  .main_category_item
+    float left
+    position relative
+    width 290px
+    height 230px
+    margin 20px 0
+    text-align center
+    transition transition
+    &:hover
+      .main_category_item_inner
+        z-index 2
+        height auto
+        background #ffffff
+        box-shadow 0 0 5px #cacaca
+      .list
+        opacity 1
+        visibility visible
+    .main_category_item_inner
+      absolute top left
+      width 100%
+      height 100%
+      padding-bottom 30px
+      overflow hidden
+    .photo
+      width 100%
+      height 200px
+      overflow hidden
+      img
+        display block
+        margin 0 auto
+        width 100%
+        height auto
+    .name
+      font-size 12px
+      line-height 20px
+      vertical-align middle
+      text-transform uppercase
+      text-align center
+      color #555555
+    .list
+      display inline-block
+      margin 20px auto 0
+      padding 0
+      list-style-type none
+      opacity 0
+      visibility hidden
+      transition transition
+      li
+        height 20px
+        text-align left
+      a
+        position relative
+        padding-left 20px
+        display inline-block
+        vertical-align top
+        font-size 10px
+        line-height 20px
+        text-transform uppercase
+        text-decoration underline
+        color #555555
+        &:hover
+          text-decoration none
+        &:before
+          content " "
+          absolute top left
+          width 20px
+          height 20px
+          background url(../images/sprite.png) -220px -20px no-repeat
+
+/* =============================================================================
+   Product
+   ========================================================================== */
+.product_grid_item
+  position relative
+  width 240px
+  height 290px
+  padding 10px
+  border-radius 3px
+  overflow hidden
+  background #ffffff
+  transition transition
+  &:hover
+    box-shadow 0 0 5px #cacaca
+    .name
+      color purple
+  .name
+    height 30px
+    overflow hidden
+    robotoCond()
+    font-size 11px
+    line-height 13px
+    text-transform uppercase
+    text-align center
+    color #000
+    transition transition
+  .photo
+    margin 25px 0 0
+    width 100%
+    height 150px
+    img
+      display block
+      margin 0 auto
+      width auto
+      height 100%
+  .info
+    position relative
+    margin 15px 0 0
+    .price
+      position relative
+      float left
+      margin 5px 0 0
+      robotoCond()
+      font-size 10px
+      line-height 16px
+      text-transform uppercase
+      color #000
+      span
+        font-size 16px
+        font-weight bold
+    .price_old
+      position relative
+      float left
+      margin 5px 0 0 10px
+      robotoCond()
+      font-size 10px
+      line-height 16px
+      font-weight 300
+      text-transform uppercase
+      color #555555
+      span
+        position relative
+        font-size 16px
+        &:after
+          content " "
+          absolute top 50% left
+          width 100%
+          height 1px
+          background #555555
+    .link_btn
+      float right
+      padding 3px 10px
+      box-shadow inset 0 -12px 25px #f99014
+      cursor pointer
+      &:hover
+        box-shadow inset 0 12px 25px #f99014
+    .link_feedbacks
+      float left
+      margin-top 5px
+    .rating
+      float right
+      margin 5px 0 0 0
+
+.product_single_offer
+  position relative
+  height 185px
+  margin 40px 0 0
+  padding 20px
+  background #f7f7f7
+  .product_single_offer_inner
+    position relative
+    width 100%
+    height 100%
+    border-radius 3px
+    overflow hidden
+    background #ffffff
+    box-shadow 0 0 5px #eaeaea
+  .name
+    absolute top 10px left 200px
+    z-index 1
+    display block
+    width 520px
+    white-space nowrap
+    overflow hidden
+    font-size 12px
+    line-height 14px
+    text-transform uppercase
+    text-decoration underline
+    color purple
+    &:after
+      content " "
+      absolute top right
+      width 40px
+      height 100%
+      background linear-gradient(to right, transparent, #ffffff)
+    &:hover
+      text-decoration none
+  .availability
+    absolute bottom 10px left 993px
+    padding 0 0 0 15px
+    robotoCond()
+    font-size 10px
+    line-height 20px
+    font-weight 300
+    text-transform uppercase
+    color #666666
+    background #ffffff
+    border-radius 3px
+    .icon
+      margin-left -2px
+  .photo
+    position relative
+    width 180px
+    height 150px
+    padding 10px
+    overflow hidden
+    .product_badges_holder
+      top 10px
+      left 10px
+    img
+      absolute top left
+      right 0
+      bottom 0
+      display block
+      width auto
+      max-height 150px
+      margin auto
+      padding-left 30px
+  .bonus
+    absolute top 30px left 545px
+    padding 5px 0 0 15px
+    span
+      display inline-block
+      height 20px
+      margin-left -5px
+      font-size 10px
+      line-height 20px
+      text-transform uppercase
+      color orange
+  .info
+    absolute top 38px left 200px
+    width 350px
+    height 100px
+    border-radius 3px
+    border 1px solid #f1f1f1
+    .price
+      absolute top 10px left 10px
+      robotoCond()
+      font-size 22px
+      line-height 22px
+      font-weight bold
+      text-transform uppercase
+      color #000
+      span
+        font-size 10px
+        font-weight normal
+    .price_old
+      absolute top 40px left 5px
+      margin 5px 0 0 5px
+      robotoCond()
+      font-size 16px
+      line-height 20px
+      font-weight 300
+      text-transform uppercase
+      color #555555
+      span
+        position relative
+        font-size 9px
+      &:after
+        content " "
+        absolute top 50% left
+        width 100%
+        height 1px
+        background #555555
+    .price_off
+      absolute top 70px left 10px
+      margin 5px 0 0
+      font-size 9px
+      line-height 20px
+      text-transform uppercase
+      color #555555
+      span
+        font-size 11px
+    .btn
+      position absolute
+      top 5px
+      left 120px
+      width 110px
+      padding 5px 0
+      cursor pointer
+      &.btn_golden
+        top 40px
+        font-size 10px
+    .favorite_add
+    .favorite_remove
+      absolute top 10px left 245px
+    .compare_add
+    .compare_go
+      absolute top 45px left 245px
+      margin 0
+    .link_feedbacks
+      absolute top 75px left 245px
+      margin 0
+    .rating
+      absolute top 75px left 120px
+      margin 0
+  .additional_goods
+    absolute top 58px left 548px
+  .additional
+    position relative
+    height 30px
+    margin-left 15px
+    padding 7px 15px 3px 10px
+    font-size 9px
+    line-height 14px
+    text-transform uppercase
+    color #000
+    span
+      text-decoration underline
+    &:before
+      content " "
+      absolute top left
+      width 10px
+      height 40px
+    &.orange
+      span
+        color orange
+      &:before
+        background url(../images/sprite.png) -280px -80px no-repeat
+    &.blue
+      span
+        color blue
+      &:before
+        background url(../images/sprite.png) -290px -80px no-repeat
+    &.green
+      span
+        color green
+      &:before
+        background url(../images/sprite.png) -300px -80px no-repeat
+    &.purple
+      span
+        color purple
+      &:before
+        background url(../images/sprite.png) -310px -80px no-repeat
+  .tags
+    absolute top 146px left 195px
+    width 550px
+    padding 10px 0 0 5px
+    .title
+      display inline-block
+      vertical-align top
+      margin-bottom 5px
+      font-size 10px
+      text-transform uppercase
+      color #555555
+    .tag
+      display inline-block
+      vertical-align top
+      margin-bottom 4px
+      padding 3px 5px
+      border-radius 3px
+      font-size 9px
+      line-height 12px
+      text-transform uppercase
+      color #555555
+      background #ebebeb
+  .properties
+    absolute top 10px left 735px
+    width 265px
+    table
+      width 100%
+    tr
+      background #eaeaea
+      &:nth-child(even)
+        background #ffffff
+    td
+      vertical-align middle
+      height 16px
+      font-size 9px
+      line-height 16px
+      text-transform uppercase
+      color #000
+      &:first-child
+        width 35%
+        padding-right 10px
+        text-align right
+        color #666666
+  .logo
+    absolute top 10px right 10px
+    width 100px
+    height 50px
+    overflow hidden
+    border-radius 3px
+    border 1px solid #f1f1f1
+    img
+      display block
+      width 100%
+      height auto
+      margin auto
+
+
+
+
+
+@import 'product_page';
+@import 'subcat_page';
+@import 'category_page';
+@import 'promos_page';
+@import 'shipping_page';
+@import 'contacts_page';
+@import 'credit_page';
+@import 'feedback_page';
+@import 'articles_page';
+@import 'services_page';
+@import 'faq_page';
+@import 'text_page';
+@import 'popup';
+
+
+
