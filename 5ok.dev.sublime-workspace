@@ -1,0 +1,598 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"margin-t",
+				"margin-top"
+			],
+			[
+				"ddd",
+				"ddd"
+			],
+			[
+				"border-top-",
+				"border-top-left-radius"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"fonts",
+				"fonts"
+			],
+			[
+				"do",
+				"docjq	HTML w/ jQuery"
+			],
+			[
+				"date",
+				"dateObject"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"cal",
+				"calendarString"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"jsp",
+				"jsp"
+			],
+			[
+				"js",
+				"jsPicker"
+			],
+			[
+				"add",
+				"addDateValue"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"vanill",
+				"vanillaPicker"
+			],
+			[
+				"vanilla",
+				"vanillaPicker"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"no-",
+				"no-repeat"
+			],
+			[
+				"bat",
+				"background-repeat"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"doc",
+				"doc	Blank HTML Page"
+			],
+			[
+				"h",
+				"html	html"
+			],
+			[
+				"fo",
+				"form"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"li",
+				"link	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index-product-full.html",
+			"settings":
+			{
+				"buffer_size": 147308,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 250325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/bxslider/jquery.bxslider.css",
+			"settings":
+			{
+				"buffer_size": 3833,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main_pravki.css",
+			"settings":
+			{
+				"buffer_size": 38113,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: S",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: sass",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"Package Control: li",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 287.0,
+		"history":
+		[
+			"alert(1)",
+			"?",
+			"git",
+			"pwd",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublimetext.com/2'+pf.replace('','%20')).read()); print('Please restart Sublime Text to finish installation')",
+			"import urllib2,os;"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/E/Projects/5ok.dev3/index-product.html",
+		"/E/Projects/5ok.dev3/js/script.js",
+		"/E/Projects/5ok.dev3/js/lightTabs.js",
+		"/E/Projects/5ok.dev3/index - копия.html",
+		"/E/Projects/5ok.dev3/index.html",
+		"/E/Projects/5ok.popups/index.html",
+		"/E/Projects/5ok.popups/css/main.css",
+		"/E/Projects/5ok.dev3/css/popups.css",
+		"/E/Projects/5ok.popups/js/script.js",
+		"/E/Projects/5ok/css/_main_old.css",
+		"/E/Projects/5ok.dev3/css/main.css",
+		"/E/Projects/5ok.dev3/css/main_pravki.css",
+		"/E/Projects/5ok.dev3/index-product2.html",
+		"/E/Projects/5ok/js/script.js",
+		"/E/Projects/5ok/product_page_pravki_old.html",
+		"/E/Projects/5ok/product_page_pravki_old2.html",
+		"/E/Projects/5ok.dev3/css/main_pravki2.css",
+		"/E/Projects/5ok/css/main.css",
+		"/E/Projects/5ok/css/main_pravki.css",
+		"/E/Projects/5ok/index_product.html",
+		"/E/Projects/5ok/product_page_pravki.html",
+		"/E/Projects/5ok/js/lightTabs.js",
+		"/E/Projects/5ok/css/product_page.styl",
+		"/E/Projects/5ok/css/bxslider/jquery.bxslider.css",
+		"/E/Projects/5ok/js/libs/jquery.bxslider.js",
+		"/E/Projects/5ok/css/main.styl",
+		"/E/Projects/treejs-wave/index.html",
+		"/E/Projects/treejs-wave/js/webgl-wave.js",
+		"/E/Projects/robotwelt/css/style.css",
+		"/E/Projects/robotwelt/index.html",
+		"/E/Projects/robotwelt/stipendium.html",
+		"/E/Projects/robotwelt/js/jquery.min.js",
+		"/E/Projects/wordpress-landing-lessons/css/sass/main.sass",
+		"/E/Projects/wordpress-landing-lessons/index.html",
+		"/E/Projects/datepicker/css/grid.css",
+		"/E/Projects/datepicker/css/main.css",
+		"/E/Projects/datepicker/index.html",
+		"/E/Projects/datepicker/js/main.js",
+		"/E/Projects/hichnik.github.io/probusinessschool/fonts/foundation-icons.woff",
+		"/E/Projects/wordpress-landing-lessons/css/sass/skins/tomato.sass",
+		"/E/Projects/wordpress-landing-lessons/js/common.js",
+		"/E/Projects/wordpress-landing-lessons/css/main.css",
+		"/E/Projects/wordpress-landing-lessons/css/css/main.css",
+		"/E/Projects/wordpress-landing-lessons/libs/linea/styles.css",
+		"/E/Projects/wordpress-landing-lessons/libs/magnific-popup/magnific-popup.css",
+		"/E/Projects/webix/index.html",
+		"/E/Projects/webix/scheduler.json",
+		"/E/Projects/webix/webix.js",
+		"/E/Projects/webix/scheduler.js",
+		"/E/Projects/webix/scheduler.css",
+		"/E/Projects/hichnik.github.io/features/breadcrumb/css/breadcrumb.css",
+		"/E/Projects/hichnik.github.io/features/breadcrumb/index.html",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/grid.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/main.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/social.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/index.html",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/main_jekyllrb.css",
+		"/E/Projects/hichnik.github.io/index.html",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/wizemenu.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/normalize.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/source-css-option.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/source-fonts.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/paddingmargin.css",
+		"/E/Projects/hichnik.github.io/probusinessschool/css/media.css",
+		"/E/Projects/lp/responsivegallery/css/responsivegallery.css",
+		"/E/Projects/lp/responsivegallery/responsivegallery.html",
+		"/E/Projects/lp/css/plugin-style.css",
+		"/E/Projects/lp/css/main.css",
+		"/E/Projects/lp/css/note-makros.css",
+		"/E/Projects/lp/textformfield-validation.html",
+		"/E/Projects/lp/flow-video-src",
+		"/C/Users/Юрий/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/E/st3/st3.sublime-project",
+		"/E/st3/index.html",
+		"/E/st3/css/style.css",
+		"/E/st3/module/module.html",
+		"/E/st3/css2/style.css",
+		"/E/st3/images/1.jpg"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"product_code",
+			";\n",
+			"доставка",
+			"chosen",
+			"30px",
+			" \n",
+			";\n",
+			"9999",
+			"товаров",
+			"wide",
+			";  ",
+			"develo",
+			"btn:",
+			"popup_call",
+			"hover",
+			"produ",
+			"brea",
+			"div",
+			"20px",
+			"subscribe",
+			"init tabs_block",
+			"div",
+			".uppercase",
+			"stars_",
+			"; ",
+			"develo",
+			" #",
+			"clear_all",
+			"clear_alll",
+			"есть",
+			"script",
+			"brea",
+			"produ",
+			"zimmer",
+			"media",
+			"wiz"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"choosen"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index-product-full.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147308,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37809,
+								37809
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7121.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 250325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241290,
+								241290
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 62267.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/bxslider/jquery.bxslider.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/main_pravki.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38099,
+								38099
+							]
+						],
+						"settings":
+						{
+							"auto_indent": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.631340300155,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "5ok.dev.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
