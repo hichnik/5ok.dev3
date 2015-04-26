@@ -2076,7 +2076,7 @@ position: relative;
   line-height: 13px;
   padding: 5px;
   
-  width: 60px;
+  width: 65px;
   /* WTF ... :( */
   border-radius: 5px;
 }
@@ -2530,8 +2530,22 @@ orange: #faa61a
   
 } 
 
+.popup .popup_header_old {
+  background: #fff;
+  padding: 15px;
+  margin: -15px;
+  padding-bottom: 30px;
+}
 
-
+.popup .popup_header_old h2 {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+ /* text-transform: uppercase;*/
+  color: #000;
+}
 
 
 
