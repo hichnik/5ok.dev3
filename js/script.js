@@ -238,6 +238,67 @@ function closeBucket() {
     $('.bucket_btn').removeClass('act');
 }
 
+function initRegistrationFrom() {
+    $('.registration_block_secured').each(function(i, block) {
+        var holder = $(block);
+
+        // password visibility
+        var passwordFields = holder.find('.field_password');
+        holder.find('.btn_toggle_password').each(function(i, el) {
+            var btn = $(el);
+            btn.click(function() {
+                if ( btn.hasClass('crossed') ) {
+                    passwordFields.find('.btn_toggle_password').removeClass('crossed');
+                    passwordFields.find('input').attr('type', 'text');
+                } else {
+                    passwordFields.find('.btn_toggle_password').addClass('crossed');
+                    passwordFields.find('input').attr('type', 'password');
+                }
+            });
+        });
+
+        //password strength
+        var strength = [0, 0, 0]; // length, capitals, letter+digits
+        var indicator = holder.find('.password_strength');
+        var inputs = passwordFields.find('input');
+        var regExpLetters = /[a-zA-Z]+/;
+        var regExpDigits = /[0-9]+/;
+        function updateIndicator() {
+            var input = $(this);
+            if (inputs.eq(0).val().length && inputs.eq(1).val().length) {
+                if (inputs.eq(0).val() == inputs.eq(1).val()) {
+                    input.val().length > 6                  ? strength[0] = 1 : strength[0] = 0;
+                    input.val().toLowerCase() != input.val()  ? strength[1] = 1 : strength[1] = 0;
+                    (regExpLetters.test(input.val()) && regExpDigits.test(input.val())) ? strength[2] = 1 : strength[2] = 0;
+
+                    switch (strength[0] + strength[1] + strength[2]) {
+                        case 0:
+                            indicator.removeClass('type_0 type_1 type_3 type_4').addClass('type_2');
+                            break;
+                        case 1:
+                            indicator.removeClass('type_0 type_1 type_2 type_4').addClass('type_3');
+                            break;
+                        case 2:
+                            indicator.removeClass('type_0 type_1 type_2 type_3').addClass('type_4');
+                            break;
+                        case 3:
+                            indicator.removeClass('type_0 type_1 type_2 type_3').addClass('type_4');
+                            break;
+                    }
+                } else {
+                    // not match each other
+                    indicator.removeClass('type_0 type_2 type_3 type_4').addClass('type_1');
+                }
+            } else {
+                // is empty
+                indicator.removeClass('type_1 type_2 type_3 type_4').addClass('type_0');
+            }
+        }
+        indicator.addClass('type_0');
+        inputs.keyup(updateIndicator);
+    });
+}
+
 function initMainSlider() {
     $('.main_slider .bxslider').bxSlider({
         mode: 'horizontal',
@@ -338,7 +399,6 @@ function initTabBlocks() {
         }
     });
 }
-
 
 function secondsToHms(date) {
     date = Number(date);
@@ -756,6 +816,11 @@ $(document).ready(function() {
         $('.custom_select').selecter();
     }
 
+    // mobile mask for inputs
+    if ($('input.input_mask_mobile').length) {
+        $('input.input_mask_mobile').mask("(000) 000-00-00");
+    }
+
     // init callback select
     if ($('.callback_select').length) {
         initCallBackSelect();
@@ -815,6 +880,26 @@ $(document).ready(function() {
     }
 
     /****************
+     * registration page
+     * */
+    // init secured registration form
+    if ($('.registration_block_secured').length) {
+        initRegistrationFrom();
+    }
+
+    // popup login password, toggle visibility
+    if ($('.login_block').length) {
+        $('.login_block').find('.btn_toggle_password').click(function() {
+            var btn = $(this);
+            if ( btn.hasClass('crossed') ) {
+                btn.removeClass('crossed').closest('.field').find('input').attr('type', 'text');
+            } else {
+                btn.addClass('crossed').closest('.field').find('input').attr('type', 'password');
+            }
+        });
+    }
+
+     /****************
      * product page
      * */
     // init product gallery

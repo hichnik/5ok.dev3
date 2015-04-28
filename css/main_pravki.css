@@ -745,6 +745,7 @@
   /*position: relative;*/
 }
 
+/*
 .product_advantages ul.advantage li.product_header:after {
   content: " ";
   position: relative;
@@ -755,7 +756,7 @@
   height: 20px;
   background: url("../images/sprite.png") -280px 0 no-repeat;
 }
-
+*/
 
 .product_advantages ul.advantage li.product_header:before {
   content: "";
@@ -1749,7 +1750,7 @@ position: relative;
   height: 7px;
   margin-bottom: 10px;
 
-  background: url('/images/pravki/yellow_up.png');
+  background: url('../images/pravki/yellow_up.png');
   
 }
 
@@ -1758,7 +1759,7 @@ position: relative;
   height: 7px;
   margin-top: 10px;
   
-  background: url('/images/pravki/yellow_down.png');
+  background: url('../images/pravki/yellow_down.png');
 }
 
 .popup_choosen_product .product_quantity {
@@ -1821,7 +1822,7 @@ position: relative;
   content: " ";
   width: 9px;
   height: 9px;
-  background: url('/images/new/del.png');
+  background: url('../images/new/del.png');
   position: absolute;
   top: 3px;
   left: -15px;
@@ -1991,12 +1992,13 @@ position: relative;
 
 .goods_you_see_green .tabs_block#goods_see .tabs_body 
 .tabs_tab .bx-wrapper .bx-controls-direction .bx-prev {
-  left: -20px;
+ /* left: -20px;*/
   background-position: 0 -360px !important;
 }
 
 .goods_you_see_green .tabs_block#goods_see .tabs_body 
 .tabs_tab .bx-wrapper .bx-controls-direction .bx-next {
+  right: -40px;
   background-position: -40px -360px !important;
 }
 
@@ -2547,5 +2549,16 @@ orange: #faa61a
   color: #000;
 }
 
+.tabs_block#goods_see_greenhead .tabs_body .tabs_tab .bx-wrapper 
+.bx-controls-direction .bx-next {
+  right: -48px;
+}
 
+.form_review .field .placeholder.black {
+  color: #000;
+}
 
+.product_header .icon_info {
+    cursor: pointer;
+    background: url("../images/sprite.png") -280px 0 no-repeat;
+}
